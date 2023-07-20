@@ -1,0 +1,26 @@
+<h1>Welcome to ODDB (online dog database)</h1>
+
+<!-- form to submit a new dog -->
+<form method="POST" action="/dogs">
+    <label for="name">Name:</label>
+    <input id="name" type="text" placeholder="name..." name="name" />
+
+    <label for="breed">Breed</label>
+    <input id="breed" type="text" placeholder="breed..." name="breed" />
+
+    <label for="color">Color:</label>
+    <input id="color" type="text" placeholder="color..." name="color" />
+
+    <button type="submit">Create New Dog</button>
+</form>
+
+<!-- array of dogs we can forEach -->
+<% allDogs.forEach(dog => { %>
+    <div>
+        <h2><%= dog.name %></h2>
+
+        <h3><%= dog.breed %></h3>
+
+        <p><%= dog.color %></p>
+    </div>
+<% }) %>
